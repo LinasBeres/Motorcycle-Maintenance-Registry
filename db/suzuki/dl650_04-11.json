@@ -1,4 +1,7 @@
 {
+    "make": "suzuki",
+    "model": "dl650 VStrom",
+    "years": "04-11",
     "tires": {
         "front": {
             "size": "110/80",

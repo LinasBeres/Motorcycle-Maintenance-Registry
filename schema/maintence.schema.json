@@ -1,0 +1,17 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "https://example.com/product.schema.json",
+    "title": "Motorcycle Maitence",
+    "description": "Motorcycle maitence information and details",
+    "type": "object",
+    "properties": {
+        "model": {
+            "description": "Brand that makes the said motorcycle, e.g. Honda or Triumph",
+            "type": "string"
+        }
+
+    },
+    "required": [
+        "model"
+    ]
+}
