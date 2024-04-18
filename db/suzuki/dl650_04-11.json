@@ -117,6 +117,7 @@
                 "with_filter_change": 2700,
                 "overhaul": 3100
             }
+        }
     },
     "periodic_maintence": {
         "air_filter": {
