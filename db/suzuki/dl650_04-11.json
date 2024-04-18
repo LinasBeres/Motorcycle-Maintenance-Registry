@@ -1,13 +1,168 @@
 {
     "tires": {
         "front": {
+            "size": "110/80",
+            "diameter": 19,
+            "construction": "R",
+            "load_index": 59,
+            "speed_rating": "H",
             "bar": 2.25,
             "psi": 32
         },
         "back": {
+            "size": "150/70",
+            "diameter": 17,
+            "construction": "R",
+            "load_index": 69,
+            "speed_rating": "H",
             "bar": 2.5,
             "psi": 36,
             "2up": { "bar": 2.8, "psi": 40 }
         }
-    }
+    },
+    "vin_location": ["right side steering head", "left side of crankcase"],
+    "fuel": {
+        "RON": 91,
+        "AKI": 87,
+        "ethanol": 10,
+        "methanol": 5
+    },
+    "engine_oil": {
+        "rated": ["SF", "SG"],
+        "viscosity": "SAE 10W-40",
+        "oil_change": 2300,
+        "with_filter_change": 2700,
+        "overhaul": 3100
+    },
+    "brake_fluid": "DOT 4",
+    "fork_oil": "SS8",
+    "engine_coolant": {
+        "capacity": 1900
+    },
+    "specification": {
+        "dimensions": {
+            "length": 2291,
+            "width": 841,
+            "seat_height": 820,
+            "wheelbase": 1555,
+            "ground_clearance": 165,
+            "dry_mass": 190
+        },
+        "engine": {
+            "type": "4-stroke, liquid-cooled, DOHC, 90-degreem V-twin",
+            "num_cylinders": 2,
+            "bore": 81.0,
+            "stroke": 62.6,
+            "displacement": 645,
+            "carburetion": "fuel injection",
+            "air_cleaner": "non-woven fabric element",
+            "starter_system": "electic",
+            "lubrication": "wet sump",
+            "idle_speed": { "average": 1300, "variance": 100 }
+        },
+        "drive_train": {
+            "clutch": "wet multi-plate type",
+            "transmission": "6-speed constant mesh",
+            "gearshift_pattern": "1-down, 5-up",
+            "primary_reduction_ratio": 2.088,
+            "final_reduction_ratio": 3.133,
+            "gear_ratios": {
+                "low": 2.461,
+                "2nd": 1.777,
+                "3rd": 1.380,
+                "4th": 1.125,
+                "5th": 0.961,
+                "top": 0.851
+            },
+            "drive_chain": "DID 525 V8, 116 links"
+        },
+        "chassis": {
+            "front_suspension": "telescopic, coil spring, oil damped",
+            "rear_suspension": "link type, coil spring, oil damped",
+            "front_fork_stroke": 150,
+            "rear_wheel_travel": 150,
+            "caster": 26,
+            "trail": 110,
+            "steering_angle": 40,
+            "turning_radius": 2.6,
+            "front_brake": "disc brake, twin",
+            "rear_brake": "disc brake",
+            "front_tire_size": "110/80 R19 M/C 59H, tubeless",
+            "rear_tire_size": "150/70 R17 M/C 69H, tubeless"
+        },
+        "electrical": {
+            "ignition_type": "electical ignition (transistorized)",
+            "ignition timing": "4 degrees B.T.D.C. at 1 300 r/min",
+            "spark_plug": ["NGK CR8E", "DENS0 U24ESR-N"],
+            "batter": "12V 36.0 kC (10 Ah)/l 0 HR",
+            "generator": "three-phase A.C generator",
+            "main_fuse": 30,
+            "fuse": [15, 15, 10, 10, 15, 15],
+            "headlight": "12 V 60155 W x 2 (H4)",
+            "position_light": "12 V 5 W x 2",
+            "brake_light": "12 v 21/5 w x 2",
+            "license_plate_light": "12 v 5 W",
+            "turn_signal_light": "12 v 21 W",
+            "speedometer_light": "LED",
+            "turn_signal_indicator_light": "LED",
+            "neutral_indicator_light": "LED",
+            "high_beam_indicator_light": "LED",
+            "instrument_lights": "LED",
+            "fuel_injection_warning_light": "LED"
+        },
+        "capacities": {
+            "fuel_tank": 22,
+            "engine_oil": {
+                "oil_change": 2300,
+                "with_filter_change": 2700,
+                "overhaul": 3100
+            }
+    },
+    "periodic_maintence": {
+        "air_filter": {
+            "inspect": 6000,
+            "replace": 18000
+        },
+        "valve_clearance": {
+            "inspect": 24000
+        },
+        "spark_plugs": {
+            "inspect": 6000,
+            "replace": 12000
+        },
+        "engine_oil": {
+            "replace": 6000
+        },
+        "oil_filter": {
+            "replace": 18000
+        },
+        "idle_speed": {
+            "inspect": 6000
+        },
+        "throttle_cable_play": {
+            "inspect": 6000
+        },
+        "engine_coolant": {
+            "replace": 2
+        },
+        "radiator_hoses": {
+            "replace": 4
+        },
+        "brake_hose": {
+            "replace": 4
+        },
+        "brake_fluid": {
+            "replace": 2
+        }
+    },
+    "lubrication_points": [
+        "clutch lever holder",
+        "side-stand pivot and spring hood",
+        "footrest pivot",
+        "drive chain",
+        "brake lever holder and throttle cables",
+        "brake pedal pivot and footrest pivot"
+    ],
+
+
 }
