@@ -8,10 +8,88 @@
         "model": {
             "description": "Brand that makes the said motorcycle, e.g. Honda or Triumph",
             "type": "string"
+        },
+        "make": {
+            "description": "Bike model, e.g. DL650 VStrom",
+            "type": "string"
+        },
+        "years": {
+            "description": "Year(s) of the bike, seperated with a dash",
+            "type": "string"
+        },
+        "tires": {
+            "description": "Information on the type, size and pressure of the tires",
+            "type": "object",
+            "properties": {
+                "size": {
+                    "description": "size of tire in the standard width/aspect ratio",
+                    "type": "string"
+                },
+                "diameter": {
+                    "description": "diameter of the tire",
+                    "type": "integer"
+                },
+                "construction": {
+                    "description": "tire construction, can be blank or none",
+                    "type": "string"
+                },
+                "load_index": {
+                    "description": "load index",
+                    "type": "integer"
+                },
+                "speed_rating": {
+                    "description": "speed rating",
+                    "type": "string"
+                },
+                "bar": {
+                    "description": "pressure in bar",
+                    "type": "number"
+                },
+                "psi": {
+                    "description": "pressure in psi",
+                    "type": "number"
+                }
+            },
+            "required": ["size", "diameter", "load_index", "speed_rating", "bar", "psi"]
+        },
+        "vin_location": {
+            "description": "list of where to find the VIN",
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minContains": 1
+        },
+        "fuel": {
+            "description": "type of fuel the bike accepts",
+            "type": "object",
+            "properties": {
+                "RON": {
+                    "description": "quality in terms of RON",
+                    "type": "integer"
+                },
+                "AKI": {
+                    "description": "quality in terms of AKI, mostly North America",
+                    "type": "integer"
+                },
+                "ethanol": {
+                    "description": "Max percentage of fuel that can be ethanol",
+                    "type": "number"
+                },
+                "methanol": {
+                    "description": "Max percentage of fuel that can be ethanol",
+                    "type": "number"
+                }
+            },
+            "required": ["RON", "AKI", "ethanol", "methonal"]
         }
-
     },
     "required": [
-        "model"
+        "model",
+        "make",
+        "years",
+        "tires",
+        "vin_location",
+        "fuel"
     ]
 }
