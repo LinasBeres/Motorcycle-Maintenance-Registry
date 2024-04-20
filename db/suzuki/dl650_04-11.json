@@ -32,31 +32,52 @@
     },
     "engine_oil": {
         "rated": ["SF", "SG"],
-        "viscosity": "SAE 10W-40",
-        "oil_change": 2300,
-        "with_filter_change": 2700,
-        "overhaul": 3100
+        "viscosity": "SAE 10W-40"
     },
     "brake_fluid": "DOT 4",
     "fork_oil": "SS8",
-    "engine_coolant": {
-        "capacity": 1900
-    },
     "specification": {
         "dimensions": {
-            "length": 2291,
-            "width": 841,
-            "seat_height": 820,
-            "wheelbase": 1555,
-            "ground_clearance": 165,
-            "dry_mass": 190
+            "length": {
+                "mm": 2290,
+                "in": 90.2
+            },
+            "width": {
+                "mm": 840,
+                "in": 33.1
+            },
+            "seat_height": {
+                "mm": 820,
+                "in": 32.3
+            },
+            "wheelbase": {
+                "mm": 1555,
+                "in": 61
+            },
+            "ground_clearance": {
+                "mm": 165,
+                "in": 6.5
+            },
+            "dry_mass": {
+                "kg": 190,
+                "lb": 418
+            }
         },
         "engine": {
             "type": "4-stroke, liquid-cooled, DOHC, 90-degreem V-twin",
             "num_cylinders": 2,
-            "bore": 81.0,
-            "stroke": 62.6,
-            "displacement": 645,
+            "bore": {
+                "mm": 81.0,
+                "in": 3.189
+            },
+            "stroke": {
+                "mm": 62.6,
+                "in": 2.465
+            },
+            "displacement": {
+                "cm3": 645,
+                "cu.in": 39.4
+            },
             "carburetion": "fuel injection",
             "air_cleaner": "non-woven fabric element",
             "starter_system": "electic",
@@ -82,12 +103,27 @@
         "chassis": {
             "front_suspension": "telescopic, coil spring, oil damped",
             "rear_suspension": "link type, coil spring, oil damped",
-            "front_fork_stroke": 150,
-            "rear_wheel_travel": 150,
+            "front_fork_stroke": {
+                "mm": 150,
+                "in": 5.9
+            },
+            "rear_wheel_travel": {
+                "mm": 150,
+                "in": 5.9
+            },
             "caster": 26,
-            "trail": 110,
-            "steering_angle": 40,
-            "turning_radius": 2.6,
+            "trail": {
+                "mm": 110,
+                "in": 4.33
+            },
+            "steering_angle": {
+                "left": 40,
+                "right": 40
+            },
+            "turning_radius": {
+                "m": 2.6,
+                "ft": 8.5
+            },
             "front_brake": "disc brake, twin",
             "rear_brake": "disc brake",
             "front_tire_size": "110/80 R19 M/C 59H, tubeless",
@@ -114,49 +150,105 @@
             "fuel_injection_warning_light": "LED"
         },
         "capacities": {
-            "fuel_tank": 22,
+            "fuel_tank": {
+                "l": 22,
+                "US_gal": 5.8,
+                "imp_gal": 4.8
+            },
             "engine_oil": {
-                "oil_change": 2300,
-                "with_filter_change": 2700,
-                "overhaul": 3100
+                "oil_change": {
+                    "ml": 2300,
+                    "US_qt": 2.4,
+                    "imp_qt": 2.0
+                },
+                "with_filter_change": {
+                    "ml": 2700,
+                    "US_qt": 2.9,
+                    "imp_qt": 2.4
+                },
+                "overhaul": {
+                    "ml": 3100,
+                    "US_qt": 3.3,
+                    "imp_qt": 2.7
+                }
+            },
+            "coolant": {
+                "l": 1.9,
+                "US_qt": 2.0,
+                "imp_qt": 1.7
             }
         }
     },
     "periodic_maintence": {
         "air_filter": {
-            "inspect": 6000,
-            "replace": 18000
+            "inspect": {
+                "km": 6000,
+                "miles": 4000
+            },
+            "replace": {
+                "km": 18000,
+                "miles": 11000
+            }
         },
         "valve_clearance": {
-            "inspect": 24000
+            "inspect": {
+                "km": 24000,
+                "miles": 14500
+            }
         },
         "spark_plugs": {
-            "inspect": 6000,
-            "replace": 12000
+            "inspect": {
+                "km": 6000,
+                "miles": 4000
+            },
+            "replace": {
+                "km": 12000,
+                "miles": 7500
+            }
         },
         "engine_oil": {
-            "replace": 6000
+            "replace": {
+                "km": 6000,
+                "miles": 4000
+            }
         },
         "oil_filter": {
-            "replace": 18000
+            "replace": {
+                "km": 18000,
+                "miles": 11000
+            }
         },
         "idle_speed": {
-            "inspect": 6000
+            "inspect": {
+                "km": 6000,
+                "miles": 4000
+            }
         },
         "throttle_cable_play": {
-            "inspect": 6000
+            "inspect": {
+                "km": 6000,
+                "miles": 4000
+            }
         },
         "engine_coolant": {
-            "replace": 2
+            "replace": {
+                "years": 2
+            }
         },
         "radiator_hoses": {
-            "replace": 4
+            "replace": {
+                "years": 4
+            }
         },
         "brake_hose": {
-            "replace": 4
+            "replace": {
+                "years": 4
+            }
         },
         "brake_fluid": {
-            "replace": 2
+            "replace": {
+                "years": 2
+            }
         }
     },
     "lubrication_points": [

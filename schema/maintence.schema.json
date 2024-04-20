@@ -25,7 +25,7 @@
                     "description": "size of tire in the standard width/aspect ratio",
                     "type": "string"
                 },
-                "diameter": {
+"diameter": {
                     "description": "diameter of the tire",
                     "type": "integer"
                 },
@@ -82,6 +82,24 @@
                 }
             },
             "required": ["RON", "AKI", "ethanol", "methonal"]
+        },
+        "engine_oil": {
+            "description": "Type of oil that the engine takes and how much",
+            "type": "object",
+            "properties": {
+                "rated": {
+                    "description": "Engine oil rating",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "viscosity": {
+                    "description": "engine oil; viscosity rating",
+                    "type": "string"
+                }
+            },
+            "required": ["rated", "viscosity"]
         }
     },
     "required": [
