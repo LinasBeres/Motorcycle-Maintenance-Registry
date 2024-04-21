@@ -20,5 +20,6 @@ jobs:
         uses: GrantBirki/json-yaml-validate@v2.7.1 # replace with the latest version
         with:
           json_schema: ./schema/maintence.schema.json # <--- the schema file that uses custom regex formats
+          ajv_strict_mode: false
           files: |
             db/**/*.json
