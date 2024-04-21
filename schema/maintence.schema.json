@@ -1,31 +1,17 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://example.com/product.schema.json",
+    "$id": "https://github.com/LinasBeres/moto-maintenance-db/blob/main/schema/maintence.schema.json",
     "title": "Motorcycle Maitence",
     "description": "Motorcycle maitence information and details",
     "type": "object",
-    "properties": {
-        "model": {
-            "description": "Brand that makes the said motorcycle, e.g. Honda or Triumph",
-            "type": "string"
-        },
-        "make": {
-            "description": "Bike model, e.g. DL650 VStrom",
-            "type": "string"
-        },
-        "years": {
-            "description": "Year(s) of the bike, seperated with a dash",
-            "type": "string"
-        },
-        "tires": {
-            "description": "Information on the type, size and pressure of the tires",
+    "definitions": {
+        "TireSchema": {
             "type": "object",
             "properties": {
                 "size": {
                     "description": "size of tire in the standard width/aspect ratio",
                     "type": "string"
                 },
-"diameter": {
+                "diameter": {
                     "description": "diameter of the tire",
                     "type": "integer"
                 },
@@ -51,6 +37,70 @@
                 }
             },
             "required": ["size", "diameter", "load_index", "speed_rating", "bar", "psi"]
+        },
+        "LengthSchema": {
+            "type": "object",
+            "properties": {
+                "m": { "type": "number" },
+                "ft": { "type": "number" }
+            },
+            "required": ["m"]
+        },
+        "SmallLengthSchema": {
+            "type": "object",
+            "properties": {
+                "mm": { "type": "number" },
+                "in": { "type": "number" }
+            },
+            "required": ["mm"]
+        },
+        "WeightSchema": {
+            "type": "object",
+            "properties": {
+                "kg": { "type": "number" },
+                "lb": { "type": "number" }
+            },
+            "required": ["kg"]
+        },
+        "VolumeSchema": {
+            "type": "object",
+            "properties": {
+                "l": { "type": "number" },
+                "US_gal": { "type": "number" },
+                "imp_gal": { "type": "number" }
+            },
+            "required": ["l"]
+        },
+        "SmallVolumeSchema": {
+            "type": "object",
+            "properties": {
+                "ml": { "type": "number" },
+                "US_qt": { "type": "number" },
+                "imp_qt": { "type": "number" }
+            },
+            "required": ["ml"]
+        }
+    },
+    "properties": {
+        "model": {
+            "description": "Brand that makes the said motorcycle, e.g. Honda or Triumph",
+            "type": "string"
+        },
+        "make": {
+            "description": "Bike model, e.g. DL650 VStrom",
+            "type": "string"
+        },
+        "years": {
+            "description": "Year(s) of the bike, seperated with a dash",
+            "type": "string"
+        },
+        "tires": {
+            "type": "object",
+            "properties": {
+                "front": { "$ref": "#/definitions/TireSchema" },
+                "back": { "$ref": "#/definitions/TireSchema" }
+            },
+            "required": ["front", "back"]
         },
         "vin_location": {
             "description": "list of where to find the VIN",
@@ -100,6 +150,73 @@
                 }
             },
             "required": ["rated", "viscosity"]
+        },
+        "brake_fluid": {
+            "description": "Type of brake fluid the bike requires",
+            "type": "string"
+        },
+        "fork_oil": {
+            "description": "Type of fork oil the bike takes",
+            "type": "string"
+        },
+        "specification": {
+            "desciprtion": "Basic specification of the motorcycle",
+            "type": "object",
+            "properties": {
+                "dimensions": {
+                    "type": "object",
+                    "properties": {
+                        "length": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "width": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "seat_height": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "wheelbase": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "ground_clearance": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "dry_mass": { "$ref": "#/definitions/WeightSchema" }
+                    },
+                    "required": ["length", "width", "seat_height", "wheelbase", "ground_clearance", "dry_mass" ]
+                },
+                "engine": {
+                    "description": "Engine specifications",
+                    "type": "object",
+                    "properties": {
+                        "type": {
+                            "description": "type of engine inside the bike",
+                            "type": "string"
+                        },
+                        "num_cylinders": { "type": "integer" },
+                        "bore": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "stroke": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "displacement": {
+                            "type": "object",
+                            "properties": {
+                                "cm3": { "type": "number" },
+                                "cu.in": { "type": "number" }
+                            },
+                            "required": ["cm3"]
+                        },
+                        "carburetion": { "type": "string" },
+                        "air_cleaner": { "type": "string" },
+                        "starter_system": { "type": "string" },
+                        "lubrication": { "type": "string" },
+                        "idle_speed": {
+                            "type": "object",
+                            "properties": {
+                                "average": { "type": "number" },
+                                "variance": { "type": "number" }
+                            },
+                            "required": ["average", "variance"]
+                        }
+                    },
+                    "required": ["type", "num_cylinders", "bore", "stroke", "displacement", "carburetion", "air_cleaner", "starter_system", "lubrication", "idle_speed"]
+                },
+                "drive_chain": {
+                    "type": "object",
+                    "properties": {
+                    },
+                    "required": []
+                }
+            },
+            "required": ["dimensions", "engine"]
         }
     },
     "required": [
@@ -108,6 +225,10 @@
         "years",
         "tires",
         "vin_location",
-        "fuel"
+        "fuel",
+        "engine_oil",
+        "brake_fluid",
+        "fork_oil",
+        "specifications"
     ]
 }
