@@ -131,7 +131,7 @@
                     "type": "number"
                 }
             },
-            "required": ["RON", "AKI", "ethanol", "methonal"]
+            "required": ["RON", "AKI", "ethanol", "methanol"]
         },
         "engine_oil": {
             "description": "Type of oil that the engine takes and how much",
@@ -282,7 +282,7 @@
                 }
             },
             "required": [
-                "dimensions", "engine", "drive_train", "chassis", "electical", "capacities"
+                "dimensions", "engine", "drive_train", "chassis", "electrical", "capacities"
             ]
         }
     },
@@ -296,6 +296,6 @@
         "engine_oil",
         "brake_fluid",
         "fork_oil",
-        "specifications"
+        "specification"
     ]
 }
