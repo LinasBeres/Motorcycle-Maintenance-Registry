@@ -207,16 +207,83 @@
                             "required": ["average", "variance"]
                         }
                     },
-                    "required": ["type", "num_cylinders", "bore", "stroke", "displacement", "carburetion", "air_cleaner", "starter_system", "lubrication", "idle_speed"]
+                    "required": [
+                        "type", "num_cylinders", "bore",
+                        "stroke", "displacement", "carburetion",
+                        "air_cleaner", "starter_system", "lubrication",
+                        "idle_speed"
+                    ]
                 },
-                "drive_chain": {
+                "drive_train": {
+                    "type": "object",
+                    "properties": {
+                        "clutch": { "type": "string" },
+                        "transmission": { "type": "string" },
+                        "gearshift_pattern": { "type": "string" },
+                        "primary_reduction_ratio": { "type": "number" },
+                        "final_reduction_ratio": { "type": "number" },
+                        "gear_ratios": {
+                            "type": "object",
+                            "properties": {
+                                "low": { "type": "number" },
+                                "2nd": { "type": "number" },
+                                "3rd": { "type": "number" },
+                                "4th": { "type": "number" },
+                                "5th": { "type": "number" },
+                                "top": { "type": "number" }
+                            },
+                            "required": ["low", "top"]
+                        },
+                        "drive_chain": { "type": "string" }
+                    },
+                    "required": ["transmission"]
+                },
+                "chassis": {
+                    "type": "object",
+                    "properties": {
+                        "front_suspension": { "type": "string" },
+                        "rear_suspension": { "type": "string" },
+                        "front_fork_stroke": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "rear_wheel_travel": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "caster": { "type": "number" },
+                        "trail": { "$ref": "#/definitions/SmallLengthSchema" },
+                        "steering_angle": {
+                            "type": "object",
+                            "properties": {
+                                "left": { "type": "number" },
+                                "right": { "type": "number" }
+                            },
+                            "required": ["left", "right"]
+                        },
+                        "turning_radius": { "$ref": "#/definitions/LengthSchema" },
+                        "front_brake": { "type": "string" },
+                        "rear_brake": { "type": "string" },
+                        "front_tire_size": { "type": "string" },
+                        "rear_tire_size": { "type": "string" }
+                    },
+                    "required": [
+                        "front_suspension", "rear_suspension", "front_fork_stroke",
+                        "rear_wheel_travel", "caster", "trail",
+                        "steering_angle", "turning_radius", "front_brake",
+                        "rear_brake", "front_tire_size", "rear_tire_size"
+                    ]
+                },
+                "electrical": {
+                    "type": "object",
+                    "properties": {
+                    },
+                    "required": []
+                },
+                "capacities": {
                     "type": "object",
                     "properties": {
                     },
                     "required": []
                 }
             },
-            "required": ["dimensions", "engine"]
+            "required": [
+                "dimensions", "engine", "drive_train", "chassis", "electical", "capacities"
+            ]
         }
     },
     "required": [
