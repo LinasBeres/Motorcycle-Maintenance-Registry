@@ -1,14 +1,24 @@
-name: Validate JSONs
+name: json-yaml-validate 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
 
-on: [pull_request, push]
+permissions:
+  contents: read
 
 jobs:
-  verify-json-validation:
+  json-yaml-validate:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Validate JSON
-        uses: docker://orrosenblatt/validate-json-action:latest
-        env:
-          INPUT_SCHEMA: schema/maintence.schema.json
-          INPUT_JSONS: db/suzuki/dl650_04-11.json
+      - uses: actions/checkout@v4
+
+      - name: json-yaml-validate
+        id: json-yaml-validate
+        uses: GrantBirki/json-yaml-validate@v2.7.1 # replace with the latest version
+        with:
+          json_schema: ./schema/maintence.schema.json # <--- the schema file that uses custom regex formats
+          files: |
+            db/**/*.json
