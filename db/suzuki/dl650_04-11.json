@@ -282,5 +282,367 @@
         "brake pedal pivot and footrest pivot"
     ],
     "maintenance": {},
-    "torque_values": {}
+    "torque_values": {
+        "cylinder_head_cover_bolt": {
+            "newtonMetre": 14.0,
+            "footPound": 10.0
+        },
+        "spark_plug": {
+            "newtonMetre": 11.0,
+            "footPound": 8.0
+        },
+        "camshaft_journal_holder_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "cam_chain_tension_adjuster_cap_bolt": {
+            "newtonMetre": 8.0,
+            "footPound": 5.7
+        },
+        "cam_chain_tension_adjust_mounting_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "cylinder_head_bolt_initial": {
+            "newtonMetre": 25.0,
+            "footPound": 18.0
+        },
+        "cylinder_head_bolt_final": {
+            "newtonMetre": 42.0,
+            "footPound": 30.5
+        },
+        "water_drain_bolt": {
+            "newtonMetre": 13.0,
+            "footPound": 9.5
+        },
+        "clutch_sleeve_hub_nut": {
+            "newtonMetre": 50.0,
+            "footPound": 36.0
+        },
+        "clutch_spring_set_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "oil_plate_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "oil_pressure_regulator": {
+            "newtonMetre": 27.0,
+            "footPound": 19.5
+        },
+        "oil_strainer_plate_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "primary_drive_gear_bolt": {
+            "newtonMetre": 70.0,
+            "footPound": 50.5
+        },
+        "generator_cover_plug": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "valve_timing_inspection_plug": {
+            "newtonMetre": 23.0,
+            "footPound": 16.3
+        },
+        "generator_rotor_bolt": {
+            "newtonMetre": 120.0,
+            "footPound": 87.0
+        },
+        "starter_clutch_bolt": {
+            "newtonMetre": 25.0,
+            "footPound": 18.0
+        },
+        "generator_stator_set_bolt": {
+            "newtonMetre": 11.0,
+            "footPound": 8.0
+        },
+        "ckp_sensor_set_bolt": {
+            "newtonMetre": 6.5,
+            "footPound": 4.7
+        },
+        "gearshift_cam_stopper_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "gearshift_cam_stopper_plate_bolt": {
+            "newtonMetre": 13.0,
+            "footPound": 9.5
+        },
+        "gearshift_arm_stopper_bolt": {
+            "newtonMetre": 19.0,
+            "footPound": 13.5
+        },
+        "oil_pressure_switch": {
+            "newtonMetre": 13.0,
+            "footPound": 9.5
+        },
+        "crankcase_bolt_m6": {
+            "newtonMetre": 11.0,
+            "footPound": 8.0
+        },
+        "crankcase_bolt_m8": {
+            "newtonMetre": 26.0,
+            "footPound": 19.0
+        },
+        "generator_cover_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "oil_gallery_plug": {
+            "newtonMetre": 18.0,
+            "footPound": 13.0
+        },
+        "oil_drain_plug": {
+            "newtonMetre": 21.0,
+            "footPound": 15.0
+        },
+        "piston_cooling_oil_jet_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "conrod_bearing_cap_bolt_initial": {
+            "newtonMetre": 21.0,
+            "footPound": 15.0,
+            "note": "final: tighten them 1/4 of a turn"
+        },
+        "exhaust_pipe_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "exhaust_pipe_nut": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "muffler_mounting_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "muffler_mounting_nut": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "oil_pipe_stopper_screw": {
+            "newtonMetre": 8.0,
+            "footPound": 6.0
+        },
+        "engine_sprocket_nut": {
+            "newtonMetre": 145.0,
+            "footPound": 105.0
+        },
+        "engine_mounting_bolt": {
+            "newtonMetre": 55.0,
+            "footPound": 40.0
+        },
+        "engine_mounting_nut": {
+            "newtonMetre": 55.0,
+            "footPound": 40.0
+        },
+        "engine_mounting_center_nut": {
+            "newtonMetre": 93.0,
+            "footPound": 67.5
+        },
+        "engine_mounting_thrust_adjuster": {
+            "newtonMetre": 12.0,
+            "footPound": 8.5
+        },
+        "engine_mounting_thrust_adjuster_lock-nut": {
+            "newtonMetre": 45.0,
+            "footPound": 32.5
+        },
+        "engine_mounting_bracket_bolt": {
+            "newtonMetre": 35.0,
+            "footPound": 25.5
+        },
+        "engine_mounting_pinch_bolt": {
+            "newtonMetre": 25.0,
+            "footPound": 18.0
+        },
+        "cooling_fan_thermo-switch": {
+            "newtonMetre": 17.0,
+            "footPound": 12.5
+        },
+        "ect_sensor": {
+            "newtonMetre": 19.0,
+            "footPound": 13.5
+        },
+        "fuel_pump_mounting_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "fuel_delivery_pipe_mounting_screw": {
+            "newtonMetre": 5.0,
+            "footPound": 3.7
+        },
+        "cooling_fan_mounting_bolt": {
+            "newtonMetre": 8.0,
+            "footPound": 6.0
+        },
+        "horn_mounting_bolt": {
+            "newtonMetre": 8.0,
+            "footPound": 6.0
+        },
+        "thermostat_case_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "oil_cooler_mounting_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "oiler_coolr_hose_union_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "tp_sensor_mounting_screw": {
+            "newtonMetre": 3.5,
+            "footPound": 2.5
+        },
+        "stp_sensor_mounting_screw": {
+            "newtonMetre": 2.0,
+            "footPound": 1.5
+        },
+        "iat_sensor": {
+            "newtonMetre": 18.0,
+            "footPound": 13.0
+        },
+        "steering_stem_head_nut": {
+            "newtonMetre": 90.0,
+            "footPound": 65.0
+        },
+        "steering_stem_lock-nut": {
+            "newtonMetre": 80.0,
+            "footPound": 58.0
+        },
+        "front_fork_upper_clamp_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "front_fork_lower_clamp_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "front_fork_cap_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "front_fork_cylinder_bolt": {
+            "newtonMetre": 20.0,
+            "footPound": 14.5
+        },
+        "front_axle": {
+            "newtonMetre": 65.0,
+            "footPound": 47.0
+        },
+        "front_axle_pinch_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "handlebar_clamp_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "front_brake_master_cylinder_mounting_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "front_brake_caliper_mounting_bolt": {
+            "newtonMetre": 39.0,
+            "footPound": 28.0
+        },
+        "brake_hose_union_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "front_caliper_air_bleeder_valve": {
+            "newtonMetre": 7.5,
+            "footPound": 5.5
+        },
+        "rear_caliper_air_bleeder_valve": {
+            "newtonMetre": 6.0,
+            "footPound": 4.3
+        },
+        "front_brake_disc_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "rear_brake_disc_bolt": {
+            "newtonMetre": 23.0,
+            "footPound": 16.5
+        },
+        "rear_brake_caliper_mounting_bolt": {
+            "newtonMetre": 22.0,
+            "footPound": 16.0
+        },
+        "rear_brake_caliper_sliding_pin": {
+            "newtonMetre": 27.0,
+            "footPound": 19.5
+        },
+        "rear_brake_pad_mounting_pin": {
+            "newtonMetre": 17.0,
+            "footPound": 12.5
+        },
+        "rear_brake_pad_mounting_pin_plug": {
+            "newtonMetre": 2.5,
+            "footPound": 1.8
+        },
+        "rear_brake_master_cylinder_mounting_bolt": {
+            "newtonMetre": 10.0,
+            "footPound": 7.0
+        },
+        "rear_brake_master_cylinder_rod_lock-nut": {
+            "newtonMetre": 18.0,
+            "footPound": 13.0
+        },
+        "front_footrest_bracket_mounting_bolt": {
+            "newtonMetre": 25.0,
+            "footPound": 18.0
+        },
+        "swingarm_pivot_shaft": {
+            "newtonMetre": 15.0,
+            "footPound": 11.0
+        },
+        "swingarm_pivot_nut": {
+            "newtonMetre": 100.0,
+            "footPound": 72.5
+        },
+        "rear_shock_absorber_mounting_nut": {
+            "newtonMetre": 50.0,
+            "footPound": 36.0
+        },
+        "cushion_lever_nut": {
+            "newtonMetre": 78.0,
+            "footPound": 56.5
+        },
+        "cushion_rod_nut": {
+            "newtonMetre": 78.0,
+            "footPound": 56.5
+        },
+        "rear_axle_nut": {
+            "newtonMetre": 100.0,
+            "footPound": 72.5
+        },
+        "rear_sprocket_nut": {
+            "newtonMetre": 60.0,
+            "footPound": 43.5
+        },
+        "seat_rail_mounting_bolt": {
+            "newtonMetre": 50.0,
+            "footPound": 36.0
+        },
+        "side_stand_bracket_mounting_bolt": {
+            "newtonMetre": 100.0,
+            "footPound": 72.5
+        },
+        "side_stand_bolt": {
+            "newtonMetre": 50.0,
+            "footPound": 36.0
+        },
+        "side_stand_nut": {
+            "newtonMetre": 40.0,
+            "footPound": 29.0
+        }
+    }
 }
