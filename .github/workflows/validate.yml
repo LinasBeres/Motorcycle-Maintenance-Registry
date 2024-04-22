@@ -19,7 +19,7 @@ jobs:
         id: json-yaml-validate
         uses: GrantBirki/json-yaml-validate@v2.7.1 # replace with the latest version
         with:
-          json_schema: ./schema/maintence.schema.json
+          json_schema: ./schema/maintenance.schema.json
           ajv_strict_mode: false
           files: |
             db/**/*.json
