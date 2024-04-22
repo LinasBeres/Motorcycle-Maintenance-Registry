@@ -377,6 +377,14 @@
                 "type": "string"
             },
             "minContains": 1
+        },
+        "maintence": {
+        },
+        "torque_values": {
+            "description": "Information for all torque values on the bike",
+            "type": "object",
+            "properties": {},
+            "required": []
         }
     },
     "required": [
@@ -390,6 +398,8 @@
         "brake_fluid",
         "fork_oil",
         "specification",
-        "lubrication_points"
+        "lubrication_points",
+        "maintence",
+        "torque_values"
     ]
 }

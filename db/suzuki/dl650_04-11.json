@@ -1,6 +1,6 @@
 {
     "make": "suzuki",
-    "model": "dl650 VStrom",
+    "model": "dl650",
     "years": "04-11",
     "tires": {
         "front": {
@@ -20,10 +20,16 @@
             "speed_rating": "H",
             "bar": 2.5,
             "psi": 36,
-            "2up": { "bar": 2.8, "psi": 40 }
+            "2up": {
+                "bar": 2.8,
+                "psi": 40
+            }
         }
     },
-    "vin_location": ["right side steering head", "left side of crankcase"],
+    "vin_location": [
+        "right side steering head",
+        "left side of crankcase"
+    ],
     "fuel": {
         "RON": 91,
         "AKI": 87,
@@ -31,7 +37,10 @@
         "methanol": 5
     },
     "engine_oil": {
-        "rated": ["SF", "SG"],
+        "rated": [
+            "SF",
+            "SG"
+        ],
         "viscosity": "SAE 10W-40"
     },
     "brake_fluid": "DOT 4",
@@ -82,7 +91,10 @@
             "air_cleaner": "non-woven fabric element",
             "starter_system": "electic",
             "lubrication": "wet sump",
-            "idle_speed": { "average": 1300, "variance": 100 }
+            "idle_speed": {
+                "average": 1300,
+                "variance": 100
+            }
         },
         "drive_train": {
             "clutch": "wet multi-plate type",
@@ -93,7 +105,7 @@
             "gear_ratios": {
                 "low": 2.461,
                 "2nd": 1.777,
-                "3rd": 1.380,
+                "3rd": 1.38,
                 "4th": 1.125,
                 "5th": 0.961,
                 "top": 0.851
@@ -132,11 +144,21 @@
         "electrical": {
             "ignition_type": "electical ignition (transistorized)",
             "ignition_timing": "4 degrees B.T.D.C. at 1 300 r/min",
-            "spark_plug": ["NGK CR8E", "DENS0 U24ESR-N"],
+            "spark_plug": [
+                "NGK CR8E",
+                "DENS0 U24ESR-N"
+            ],
             "battery": "12V 36.0 kC (10 Ah)/l 0 HR",
             "generator": "three-phase A.C generator",
             "main_fuse": 30,
-            "fuse": [15, 15, 10, 10, 15, 15],
+            "fuse": [
+                15,
+                15,
+                10,
+                10,
+                15,
+                15
+            ],
             "headlight": "12 V 60155 W x 2 (H4)",
             "position_light": "12 V 5 W x 2",
             "brake_light": "12 v 21/5 w x 2",
@@ -258,11 +280,5 @@
         "drive chain",
         "brake lever holder and throttle cables",
         "brake pedal pivot and footrest pivot"
-    ],
-    "maintence": {
-
-    },
-    "torque_values": {
-
-    }
+    ]
 }
