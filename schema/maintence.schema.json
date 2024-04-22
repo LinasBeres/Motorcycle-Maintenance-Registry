@@ -79,6 +79,30 @@
                 "imp_qt": { "type": "number" }
             },
             "required": ["ml"]
+        },
+        "YearSchema": {
+            "type": "object",
+            "properties": { "years": { "type": "integer" } },
+            "required": ["years"]
+        },
+        "DistanceSchema": {
+            "type": "object",
+            "properties": {
+                "km": { "type": "integer" },
+                "miles": { "type": "integer" }
+            },
+            "required": ["km"]
+        },
+        "InspectReplaceSchema": {
+            "type": "object",
+            "properties": {
+                "inspect": { "$ref": "#/definitions/DistanceSchema" },
+                "replace": { "$ref": "#/definitions/DistanceSchema" }
+            }
+        },
+        "ReplaceYearsSchema": {
+            "type": "object",
+            "properties": { "replace": { "$ref": "#/definitions/YearSchema" } }
         }
     },
     "properties": {
@@ -271,19 +295,88 @@
                 "electrical": {
                     "type": "object",
                     "properties": {
+                        "ignition_type": { "type": "string" },
+                        "ignition_timing": { "type": "string" },
+                        "spark_plug": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "minContains": 1
+                        },
+                        "battery": { "type": "string" },
+                        "generator": { "type": "string" },
+                        "main_fuse": { "type": "integer" },
+                        "fuse": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            },
+                            "minContains": 1
+                        },
+                        "headlight": { "type": "string" },
+                        "position_light": { "type": "string" },
+                        "brake_light": { "type": "string" },
+                        "license_plate_light": { "type": "string" },
+                        "turn_signal_light": { "type": "string" },
+                        "speedometer_light": { "type": "string" },
+                        "turn_signal_indicator_light": { "type": "string" },
+                        "neutral_indicator_light": { "type": "string" },
+                        "high_beam_indicator_light": { "type": "string" },
+                        "instrument_lights": { "type": "string" },
+                        "fuel_injection_warning_light": { "type": "string" }
                     },
-                    "required": []
+                    "required": [
+                        "ignition_type", "ignition_timing", "spark_plug",
+                        "battery", "generator", "main_fuse",
+                        "fuse", "headlight", "position_light"
+                    ]
                 },
                 "capacities": {
                     "type": "object",
                     "properties": {
+                        "fuel_tank": { "$ref": "#/definitions/VolumeSchema" },
+                        "engine_oil": {
+                            "type": "object",
+                            "properties": {
+                                "oil_change": { "$ref": "#/definitions/SmallVolumeSchema" },
+                                "with_filter_change": { "$ref": "#/definitions/SmallVolumeSchema" },
+                                "overhaul": { "$ref": "#/definitions/SmallVolumeSchema" }
+                            },
+                            "required": ["oil_change"]
+                        },
+                        "coolant": { "$ref": "#/definitions/VolumeSchema" }
                     },
-                    "required": []
+                    "required": ["fuel_tank", "engine_oil", "coolant"]
                 }
             },
             "required": [
                 "dimensions", "engine", "drive_train", "chassis", "electrical", "capacities"
             ]
+        },
+        "periodic_maintence": {
+            "type": "object",
+            "properties": {
+                "air_filter": { "$ref": "#/definitions/InspectReplaceSchema" },
+                "valve_clearance": { "$ref": "#/definitions/InspectReplaceSchema" },
+                "spark_plug": { "$ref": "#/definitions/InspectReplaceSchema" },
+                "engine_oil": { "$ref": "#/definitions/InspectReplaceSchema" },
+                "oil_filter": { "$ref": "#/definitions/InspectReplaceSchema" },
+                "idle_speed": { "$ref": "#/definitions/InspectReplaceSchema" },
+                "throttle_cable_play": { "$ref": "#/definitions/InspectReplaceSchema" },
+                "engine_coolant": { "$ref": "#/definitions/ReplaceYearsSchema" },
+                "radiator_hoses": { "$ref": "#/definitions/ReplaceYearsSchema" },
+                "brake_hose": { "$ref": "#/definitions/ReplaceYearsSchema" },
+                "brake_fluid": { "$ref": "#/definitions/ReplaceYearsSchema" }
+            },
+            "required": []
+        },
+        "lubrication_points": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minContains": 1
         }
     },
     "required": [
@@ -296,6 +389,7 @@
         "engine_oil",
         "brake_fluid",
         "fork_oil",
-        "specification"
+        "specification",
+        "lubrication_points"
     ]
 }

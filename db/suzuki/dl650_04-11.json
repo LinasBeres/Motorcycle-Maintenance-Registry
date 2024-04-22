@@ -131,9 +131,9 @@
         },
         "electrical": {
             "ignition_type": "electical ignition (transistorized)",
-            "ignition timing": "4 degrees B.T.D.C. at 1 300 r/min",
+            "ignition_timing": "4 degrees B.T.D.C. at 1 300 r/min",
             "spark_plug": ["NGK CR8E", "DENS0 U24ESR-N"],
-            "batter": "12V 36.0 kC (10 Ah)/l 0 HR",
+            "battery": "12V 36.0 kC (10 Ah)/l 0 HR",
             "generator": "three-phase A.C generator",
             "main_fuse": 30,
             "fuse": [15, 15, 10, 10, 15, 15],
