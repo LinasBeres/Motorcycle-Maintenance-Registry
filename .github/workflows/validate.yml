@@ -23,4 +23,3 @@ jobs:
           ajv_strict_mode: false
           files: |
             db/**/*.json
-          exclude_file: *.generic.json
