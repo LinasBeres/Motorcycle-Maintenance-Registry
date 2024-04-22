@@ -201,7 +201,7 @@
             }
         }
     },
-    "periodic_maintence": {
+    "periodic_maintenance": {
         "air_filter": {
             "inspect": {
                 "km": 6000,
@@ -281,6 +281,6 @@
         "brake lever holder and throttle cables",
         "brake pedal pivot and footrest pivot"
     ],
-    "maintence": {},
+    "maintenance": {},
     "torque_values": {}
 }

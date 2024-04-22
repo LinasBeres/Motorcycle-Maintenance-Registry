@@ -1,5 +1,5 @@
 {
-    "$id": "https://github.com/LinasBeres/moto-maintenance-db/blob/main/schema/maintence.schema.json",
+    "$id": "https://github.com/LinasBeres/moto-maintenance-db/blob/main/schema/maintenance.schema.json",
     "title": "Motorcycle Maitence",
     "description": "Motorcycle maitence information and details",
     "type": "object",
@@ -354,7 +354,7 @@
                 "dimensions", "engine", "drive_train", "chassis", "electrical", "capacities"
             ]
         },
-        "periodic_maintence": {
+        "periodic_maintenance": {
             "type": "object",
             "properties": {
                 "air_filter": { "$ref": "#/definitions/InspectReplaceSchema" },
@@ -378,7 +378,7 @@
             },
             "minContains": 1
         },
-        "maintence": {
+        "maintenance": {
         },
         "torque_values": {
             "description": "Information for all torque values on the bike",
@@ -399,7 +399,7 @@
         "fork_oil",
         "specification",
         "lubrication_points",
-        "maintence",
+        "maintenance",
         "torque_values"
     ]
 }
