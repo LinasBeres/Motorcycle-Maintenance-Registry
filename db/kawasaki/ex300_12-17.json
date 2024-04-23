@@ -1,0 +1,184 @@
+{
+    "manufacturer": "kawasaki",
+    "model": "EX300",
+    "years": "2012-2017",
+    "name": "Ninja 300",
+    "vin_location": [
+    ],
+    "fuel": {
+        "RON": 91,
+        "AKI": 87,
+        "ethanol": 10,
+        "methanol": 5
+    },
+    "specification": {
+        "dimensions": {
+            "length": {
+                "mm": 2015,
+                "in": 79.33
+            },
+            "width": {
+                "mm": 715,
+                "in": 28.1
+            },
+            "seat_height": {
+                "mm": 785,
+                "in": 30.9
+            },
+            "wheelbase": {
+                "mm": 1405,
+                "in": 55.31
+            },
+            "ground_clearance": {
+                "mm": 140,
+                "in": 5.51
+            },
+            "dry_mass": {
+                "kg": 164,
+                "lb": 362
+            },
+            "wet_mass": {
+                "kg": 172,
+                "lb": 279
+            }
+        },
+        "engine": {
+            "type": "4-stroke, liquid-cooled, DOHC, 2-cylinder",
+            "num_cylinders": 2,
+            "bore": {
+                "mm": 62.0,
+                "in": 2.44
+            },
+            "stroke": {
+                "mm": 49,
+                "in": 1.93
+            },
+            "displacement": {
+                "cm3": 296,
+                "cu.in": 18.1
+            },
+            "compression_ratio": "10.6 : 1",
+            "carburetion": "fuel injection",
+            "air_cleaner": "foam filter",
+            "starter_system": "electic",
+            "lubrication": "wet sump",
+            "engine_oil": {
+                "rated": [
+                    "API SG",
+                    "SH",
+                    "SJ",
+                    "SL",
+                    "SM with JASO MA, MA1, MA2"
+                ],
+                "viscosity": "SAE 10W-40"
+            },
+            "idle_speed": {
+                "average": 1300,
+                "variance": 100
+            }
+        },
+        "drive_train": {
+            "clutch": "wet multi-plate type",
+            "transmission": "6-speed, return shift, constant mesh",
+            "gearshift_pattern": "1-down, 5-up",
+            "primary_reduction_ratio": 3.087,
+            "final_reduction_ratio": 3.000,
+            "overall_drive_ratio": 7.938,
+            "gear_ratios": {
+                "low": 2.714,
+                "2nd": 1.789,
+                "3rd": 1.409,
+                "4th": 1.160,
+                "5th": 1.000,
+                "top": 0.857
+            },
+            "driving_system": "chain drive",
+            "drive_chain": "DID 525 V8, 116 links"
+        },
+        "chassis": {
+            "front_suspension": "telescopic, coil spring, oil damped",
+            "rear_suspension": "link type, coil spring, oil damped",
+            "fork_oil": "SS08",
+            "front_fork_stroke": {
+                "mm": 120,
+                "in": 4.7
+            },
+            "rear_wheel_travel": {
+                "mm": 132,
+                "in": 5.2
+            },
+            "caster": 27,
+            "trail": {
+                "mm": 93,
+                "in": 3.7
+            },
+            "turning_radius": {
+                "m": 2.4,
+                "ft": 7.83
+            },
+            "front_brake": "disc brake",
+            "rear_brake": "disc brake",
+            "brake_fluid": "DOT 4",
+            "tires": {
+                "front": {
+                    "size": "110/70",
+                    "diameter": 17,
+                    "construction": "R",
+                    "load_index": 54,
+                    "speed_rating": "S",
+                    "bar": 2.0,
+                    "psi": 29
+                },
+                "back": {
+                    "size": "140/70",
+                    "diameter": 17,
+                    "construction": "R",
+                    "load_index": 66,
+                    "speed_rating": "S",
+                    "bar": 2.25,
+                    "psi": 32
+                }
+            }
+        },
+        "electrical": {
+            "ignition_type": "electical ignition (transistorized)",
+            "ignition_timing": "4 degrees B.T.D.C. at 1 300 r/min",
+            "spark_plug": {
+                "type": [ "NGK CR8E" ],
+                "gap": "0.7-0.8"
+            },
+            "battery": "12 V 8 Ah",
+            "headlight": "12 V 55 W",
+            "high_beam": "12 V 55 W + 55 W",
+            "brake_light": "12 V 21 W",
+            "tail_light": "12 V 5 W"
+        },
+        "capacities": {
+            "fuel_tank": {
+                "l": 17,
+                "US_gal": 4.5
+            },
+            "engine_oil": {
+                "with_filter_change": {
+                    "ml": 2400,
+                    "US_qt": 2.5
+                }
+            },
+            "coolant": {
+                "ml": 1500,
+                "US_qt": 1.6
+            }
+        }
+    },
+    "periodic_maintenance": { },
+    "lubrication_points": [
+        "clutch lever holder",
+        "side-stand pivot and spring hood",
+        "footrest pivot",
+        "chain drive",
+        "brake lever holder and throttle cables",
+        "brake pedal pivot and footrest pivot"
+    ],
+    "maintenance": {},
+    "torque_values": { }
+}

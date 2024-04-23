@@ -110,7 +110,7 @@
             "description": "Brand that makes the said motorcycle, e.g. Honda or Triumph",
             "type": "string"
         },
-        "make": {
+        "manufacturer": {
             "description": "Bike model, e.g. DL650 VStrom",
             "type": "string"
         },
@@ -184,6 +184,7 @@
                             },
                             "required": ["cm3"]
                         },
+                        "compression_ratio": { "type": "string" },
                         "carburetion": { "type": "string" },
                         "air_cleaner": { "type": "string" },
                         "starter_system": { "type": "string" },
@@ -219,7 +220,7 @@
                         "type", "num_cylinders", "bore",
                         "stroke", "displacement", "carburetion",
                         "air_cleaner", "starter_system", "lubrication",
-                        "engine_oil", "idle_speed"
+                        "engine_oil", "idle_speed", "compression_ratio"
                     ]
                 },
                 "drive_train": {
@@ -242,9 +243,10 @@
                             },
                             "required": ["low", "top"]
                         },
-                        "drive_chain": { "type": "string" }
+                        "drive_chain": { "type": "string" },
+                        "drive_system": { "type": "string" }
                     },
-                    "required": ["transmission"]
+                    "required": ["transmission", "driving_system"]
                 },
                 "chassis": {
                     "type": "object",
@@ -286,7 +288,7 @@
                     "required": [
                         "front_suspension", "rear_suspension", "front_fork_stroke",
                         "rear_wheel_travel", "caster", "trail",
-                        "steering_angle", "turning_radius", "front_brake",
+                        "turning_radius", "front_brake",
                         "rear_brake", "tires", "brake_fluid",
                         "fork_oil"
                     ]
@@ -334,8 +336,7 @@
                     },
                     "required": [
                         "ignition_type", "ignition_timing", "spark_plug",
-                        "battery", "generator", "main_fuse",
-                        "fuse", "headlight", "position_light"
+                        "battery", "headlight"
                     ]
                 },
                 "capacities": {
@@ -349,9 +350,9 @@
                                 "with_filter_change": { "$ref": "#/definitions/SmallVolumeSchema" },
                                 "overhaul": { "$ref": "#/definitions/SmallVolumeSchema" }
                             },
-                            "required": ["oil_change"]
+                            "required": ["with_filter_change"]
                         },
-                        "coolant": { "$ref": "#/definitions/VolumeSchema" }
+                        "coolant": { "$ref": "#/definitions/SmallVolumeSchema" }
                     },
                     "required": ["fuel_tank", "engine_oil", "coolant"]
                 }
@@ -395,7 +396,7 @@
     },
     "required": [
         "model",
-        "make",
+        "manufacturer",
         "years",
         "vin_location",
         "fuel",
