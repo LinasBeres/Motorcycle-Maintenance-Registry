@@ -118,14 +118,6 @@
             "description": "Year(s) of the bike, seperated with a dash",
             "type": "string"
         },
-        "tires": {
-            "type": "object",
-            "properties": {
-                "front": { "$ref": "#/definitions/TireSchema" },
-                "back": { "$ref": "#/definitions/TireSchema" }
-            },
-            "required": ["front", "back"]
-        },
         "vin_location": {
             "description": "list of where to find the VIN",
             "type": "array",
@@ -156,32 +148,6 @@
                 }
             },
             "required": ["RON", "AKI", "ethanol", "methanol"]
-        },
-        "engine_oil": {
-            "description": "Type of oil that the engine takes and how much",
-            "type": "object",
-            "properties": {
-                "rated": {
-                    "description": "Engine oil rating",
-                    "type": "array",
-                    "items": {
-                        "type": "string"
-                    }
-                },
-                "viscosity": {
-                    "description": "engine oil; viscosity rating",
-                    "type": "string"
-                }
-            },
-            "required": ["rated", "viscosity"]
-        },
-        "brake_fluid": {
-            "description": "Type of brake fluid the bike requires",
-            "type": "string"
-        },
-        "fork_oil": {
-            "description": "Type of fork oil the bike takes",
-            "type": "string"
         },
         "specification": {
             "desciprtion": "Basic specification of the motorcycle",
@@ -222,6 +188,24 @@
                         "air_cleaner": { "type": "string" },
                         "starter_system": { "type": "string" },
                         "lubrication": { "type": "string" },
+                        "engine_oil": {
+                            "description": "Type of oil that the engine takes and how much",
+                            "type": "object",
+                            "properties": {
+                                "rated": {
+                                    "description": "Engine oil rating",
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "viscosity": {
+                                    "description": "engine oil; viscosity rating",
+                                    "type": "string"
+                                }
+                            },
+                            "required": ["rated", "viscosity"]
+                        },
                         "idle_speed": {
                             "type": "object",
                             "properties": {
@@ -235,7 +219,7 @@
                         "type", "num_cylinders", "bore",
                         "stroke", "displacement", "carburetion",
                         "air_cleaner", "starter_system", "lubrication",
-                        "idle_speed"
+                        "engine_oil", "idle_speed"
                     ]
                 },
                 "drive_train": {
@@ -267,6 +251,10 @@
                     "properties": {
                         "front_suspension": { "type": "string" },
                         "rear_suspension": { "type": "string" },
+                        "fork_oil": {
+                            "description": "Type of fork oil the bike takes",
+                            "type": "string"
+                        },
                         "front_fork_stroke": { "$ref": "#/definitions/SmallLengthSchema" },
                         "rear_wheel_travel": { "$ref": "#/definitions/SmallLengthSchema" },
                         "caster": { "type": "number" },
@@ -282,14 +270,25 @@
                         "turning_radius": { "$ref": "#/definitions/LengthSchema" },
                         "front_brake": { "type": "string" },
                         "rear_brake": { "type": "string" },
-                        "front_tire_size": { "type": "string" },
-                        "rear_tire_size": { "type": "string" }
+                        "brake_fluid": {
+                            "description": "Type of brake fluid the bike requires",
+                            "type": "string"
+                        },
+                        "tires": {
+                            "type": "object",
+                            "properties": {
+                                "front": { "$ref": "#/definitions/TireSchema" },
+                                "back": { "$ref": "#/definitions/TireSchema" }
+                            },
+                            "required": ["front", "back"]
+                        }
                     },
                     "required": [
                         "front_suspension", "rear_suspension", "front_fork_stroke",
                         "rear_wheel_travel", "caster", "trail",
                         "steering_angle", "turning_radius", "front_brake",
-                        "rear_brake", "front_tire_size", "rear_tire_size"
+                        "rear_brake", "tires", "brake_fluid",
+                        "fork_oil"
                     ]
                 },
                 "electrical": {
@@ -298,11 +297,18 @@
                         "ignition_type": { "type": "string" },
                         "ignition_timing": { "type": "string" },
                         "spark_plug": {
-                            "type": "array",
-                            "items": {
-                                "type": "string"
+                            "type": "object",
+                            "properties": {
+                                "type": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "minContains": 1
+                                },
+                                "gap": { "type": "string" }
                             },
-                            "minContains": 1
+                            "required": ["type", "gap"]
                         },
                         "battery": { "type": "string" },
                         "generator": { "type": "string" },
@@ -391,12 +397,8 @@
         "model",
         "make",
         "years",
-        "tires",
         "vin_location",
         "fuel",
-        "engine_oil",
-        "brake_fluid",
-        "fork_oil",
         "specification",
         "lubrication_points",
         "maintenance",

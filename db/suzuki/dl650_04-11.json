@@ -2,33 +2,9 @@
     "make": "suzuki",
     "model": "dl650",
     "years": "04-11",
-    "tires": {
-        "front": {
-            "size": "110/80",
-            "diameter": 19,
-            "construction": "R",
-            "load_index": 59,
-            "speed_rating": "H",
-            "bar": 2.25,
-            "psi": 32
-        },
-        "back": {
-            "size": "150/70",
-            "diameter": 17,
-            "construction": "R",
-            "load_index": 69,
-            "speed_rating": "H",
-            "bar": 2.5,
-            "psi": 36,
-            "2up": {
-                "bar": 2.8,
-                "psi": 40
-            }
-        }
-    },
     "vin_location": [
-        "right side steering head",
-        "left side of crankcase"
+        "frame number: right side steering head",
+        "engine number: left side of crankcase"
     ],
     "fuel": {
         "RON": 91,
@@ -36,15 +12,6 @@
         "ethanol": 10,
         "methanol": 5
     },
-    "engine_oil": {
-        "rated": [
-            "SF",
-            "SG"
-        ],
-        "viscosity": "SAE 10W-40"
-    },
-    "brake_fluid": "DOT 4",
-    "fork_oil": "SS8",
     "specification": {
         "dimensions": {
             "length": {
@@ -91,6 +58,13 @@
             "air_cleaner": "non-woven fabric element",
             "starter_system": "electic",
             "lubrication": "wet sump",
+            "engine_oil": {
+                "rated": [
+                    "SF",
+                    "SG"
+                ],
+                "viscosity": "SAE 10W-40"
+            },
             "idle_speed": {
                 "average": 1300,
                 "variance": 100
@@ -115,6 +89,7 @@
         "chassis": {
             "front_suspension": "telescopic, coil spring, oil damped",
             "rear_suspension": "link type, coil spring, oil damped",
+            "fork_oil": "SS8",
             "front_fork_stroke": {
                 "mm": 150,
                 "in": 5.9
@@ -138,16 +113,42 @@
             },
             "front_brake": "disc brake, twin",
             "rear_brake": "disc brake",
-            "front_tire_size": "110/80 R19 M/C 59H, tubeless",
-            "rear_tire_size": "150/70 R17 M/C 69H, tubeless"
+            "brake_fluid": "DOT 4",
+            "tires": {
+                "front": {
+                    "size": "110/80",
+                    "diameter": 19,
+                    "construction": "R",
+                    "load_index": 59,
+                    "speed_rating": "H",
+                    "bar": 2.25,
+                    "psi": 32
+                },
+                "back": {
+                    "size": "150/70",
+                    "diameter": 17,
+                    "construction": "R",
+                    "load_index": 69,
+                    "speed_rating": "H",
+                    "bar": 2.5,
+                    "psi": 36,
+                    "2up": {
+                        "bar": 2.8,
+                        "psi": 40
+                    }
+                }
+            }
         },
         "electrical": {
             "ignition_type": "electical ignition (transistorized)",
             "ignition_timing": "4 degrees B.T.D.C. at 1 300 r/min",
-            "spark_plug": [
+            "spark_plug": {
+                "type": [
                 "NGK CR8E",
                 "DENS0 U24ESR-N"
-            ],
+                ],
+                "gap": "0.7-0.8"
+            },
             "battery": "12V 36.0 kC (10 Ah)/l 0 HR",
             "generator": "three-phase A.C generator",
             "main_fuse": 30,
