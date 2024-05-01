@@ -155,7 +155,7 @@
         },
         "capacities": {
             "fuel_tank": {
-                "l": 17,
+                "L": 17,
                 "US_gal": 4.5
             },
             "engine_oil": {

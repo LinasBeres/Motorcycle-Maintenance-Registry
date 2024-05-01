@@ -177,7 +177,7 @@
         },
         "capacities": {
             "fuel_tank": {
-                "l": 22,
+                "L": 22,
                 "US_gal": 5.8,
                 "imp_gal": 4.8
             },

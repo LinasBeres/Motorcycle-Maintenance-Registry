@@ -65,11 +65,11 @@
         "VolumeSchema": {
             "type": "object",
             "properties": {
-                "l": { "type": "number" },
+                "L": { "type": "number" },
                 "US_gal": { "type": "number" },
                 "imp_gal": { "type": "number" }
             },
-            "required": ["l"]
+            "required": ["L"]
         },
         "SmallVolumeSchema": {
             "type": "object",
