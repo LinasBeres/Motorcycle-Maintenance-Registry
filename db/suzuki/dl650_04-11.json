@@ -124,8 +124,10 @@
                     "construction": "R",
                     "load_index": 59,
                     "speed_rating": "H",
-                    "bar": 2.25,
-                    "psi": 32
+                    "pressure": {
+                        "bar": 2.25,
+                        "psi": 32
+                    }
                 },
                 "back": {
                     "size": "150/70",
@@ -133,11 +135,15 @@
                     "construction": "R",
                     "load_index": 69,
                     "speed_rating": "H",
-                    "bar": 2.5,
-                    "psi": 36,
+                    "pressure": {
+                        "bar": 2.5,
+                        "psi": 36
+                    },
                     "2up": {
-                        "bar": 2.8,
-                        "psi": 40
+                        "pressure": {
+                            "bar": 2.8,
+                            "psi": 40
+                        }
                     }
                 }
             }

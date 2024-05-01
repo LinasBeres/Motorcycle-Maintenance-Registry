@@ -27,13 +27,15 @@
                     "description": "speed rating",
                     "type": "string"
                 },
-                "bar": {
-                    "description": "pressure in bar",
-                    "type": "number"
-                },
-                "psi": {
-                    "description": "pressure in psi",
-                    "type": "number"
+                "pressure": {
+                    "bar": {
+                        "description": "pressure in bar",
+                        "type": "number"
+                    },
+                    "psi": {
+                        "description": "pressure in psi",
+                        "type": "number"
+                    }
                 }
             },
             "required": ["size", "diameter", "load_index", "speed_rating", "bar", "psi"]
