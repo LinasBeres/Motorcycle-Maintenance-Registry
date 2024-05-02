@@ -120,37 +120,6 @@
             "description": "Year(s) of the bike, seperated with a dash",
             "type": "string"
         },
-        "vin_location": {
-            "description": "list of where to find the VIN",
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "minContains": 1
-        },
-        "fuel": {
-            "description": "type of fuel the bike accepts",
-            "type": "object",
-            "properties": {
-                "RON": {
-                    "description": "quality in terms of RON",
-                    "type": "integer"
-                },
-                "AKI": {
-                    "description": "quality in terms of AKI, mostly North America",
-                    "type": "integer"
-                },
-                "ethanol": {
-                    "description": "Max percentage of fuel that can be ethanol",
-                    "type": "number"
-                },
-                "methanol": {
-                    "description": "Max percentage of fuel that can be ethanol",
-                    "type": "number"
-                }
-            },
-            "required": ["RON", "AKI", "ethanol", "methanol"]
-        },
         "specification": {
             "desciprtion": "Basic specification of the motorcycle",
             "type": "object",
@@ -216,13 +185,37 @@
                                 "variance": { "type": "number" }
                             },
                             "required": ["average", "variance"]
+                        },
+                        "fuel": {
+                            "description": "type of fuel the bike accepts",
+                            "type": "object",
+                            "properties": {
+                                "RON": {
+                                    "description": "quality in terms of RON",
+                                    "type": "integer"
+                                },
+                                "AKI": {
+                                    "description": "quality in terms of AKI, mostly North America",
+                                    "type": "integer"
+                                },
+                                "ethanol": {
+                                    "description": "Max percentage of fuel that can be ethanol",
+                                    "type": "number"
+                                },
+                                "methanol": {
+                                    "description": "Max percentage of fuel that can be ethanol",
+                                    "type": "number"
+                                }
+                            },
+                            "required": ["RON", "AKI", "ethanol", "methanol"]
                         }
                     },
                     "required": [
                         "type", "num_cylinders", "bore",
                         "stroke", "displacement", "carburetion",
                         "air_cleaner", "starter_system", "lubrication",
-                        "engine_oil", "idle_speed", "compression_ratio"
+                        "engine_oil", "idle_speed", "compression_ratio",
+                        "fuel"
                     ]
                 },
                 "drive_train": {
@@ -285,6 +278,14 @@
                                 "back": { "$ref": "#/definitions/TireSchema" }
                             },
                             "required": ["front", "back"]
+                        },
+                        "vin_location": {
+                            "description": "list of where to find the VIN",
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            },
+                            "minContains": 1
                         }
                     },
                     "required": [
@@ -292,7 +293,7 @@
                         "rear_wheel_travel", "caster", "trail",
                         "turning_radius", "front_brake",
                         "rear_brake", "tires", "brake_fluid",
-                        "fork_oil"
+                        "fork_oil", "vin_location"
                     ]
                 },
                 "electrical": {
@@ -378,14 +379,14 @@
                 "brake_hose": { "$ref": "#/definitions/ReplaceYearsSchema" },
                 "brake_fluid": { "$ref": "#/definitions/ReplaceYearsSchema" }
             },
-            "required": []
-        },
-        "lubrication_points": {
-            "type": "array",
-            "items": {
-                "type": "string"
+            "lubrication_points": {
+                "type": "array",
+                "items": {
+                    "type": "string"
+                },
+                "minContains": 1
             },
-            "minContains": 1
+            "required": ["lubrication_points"]
         },
         "maintenance": {
         },
@@ -400,10 +401,7 @@
         "model",
         "manufacturer",
         "years",
-        "vin_location",
-        "fuel",
         "specification",
-        "lubrication_points",
         "maintenance",
         "torque_values"
     ]

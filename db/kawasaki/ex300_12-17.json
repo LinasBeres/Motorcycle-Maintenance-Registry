@@ -3,14 +3,6 @@
     "model": "EX300",
     "years": "2012-2017",
     "name": "Ninja 300",
-    "vin_location": [
-    ],
-    "fuel": {
-        "RON": 91,
-        "AKI": 87,
-        "ethanol": 10,
-        "methanol": 5
-    },
     "specification": {
         "dimensions": {
             "length": {
@@ -75,6 +67,12 @@
             "idle_speed": {
                 "average": 1300,
                 "variance": 100
+            },
+            "fuel": {
+                "RON": 91,
+                "AKI": 87,
+                "ethanol": 10,
+                "methanol": 5
             }
         },
         "drive_train": {
@@ -142,7 +140,9 @@
                         "psi": 32
                     }
                 }
-            }
+            },
+            "vin_location": [
+            ]
         },
         "electrical": {
             "ignition_type": "electical ignition (transistorized)",
@@ -174,15 +174,16 @@
             }
         }
     },
-    "periodic_maintenance": { },
-    "lubrication_points": [
-        "clutch lever holder",
-        "side-stand pivot and spring hood",
-        "footrest pivot",
-        "chain drive",
-        "brake lever holder and throttle cables",
-        "brake pedal pivot and footrest pivot"
-    ],
+    "periodic_maintenance": {
+        "lubrication_points": [
+            "clutch lever holder",
+            "side-stand pivot and spring hood",
+            "footrest pivot",
+            "chain drive",
+            "brake lever holder and throttle cables",
+            "brake pedal pivot and footrest pivot"
+        ]
+    },
     "maintenance": {},
     "torque_values": { }
 }

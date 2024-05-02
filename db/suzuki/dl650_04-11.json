@@ -1,18 +1,8 @@
 {
     "manufacturer": "suzuki",
     "model": "dl650",
-    "years": "04-11",
+    "years": "2004-2011",
     "name": "VStrom 650",
-    "vin_location": [
-        "frame number: right side steering head",
-        "engine number: left side of crankcase"
-    ],
-    "fuel": {
-        "RON": 91,
-        "AKI": 87,
-        "ethanol": 10,
-        "methanol": 5
-    },
     "specification": {
         "dimensions": {
             "length": {
@@ -41,7 +31,7 @@
             }
         },
         "engine": {
-            "type": "4-stroke, liquid-cooled, DOHC, 90-degreem V-twin",
+            "type": "4-stroke, liquid-cooled, DOHC, 90-degree V-twin",
             "num_cylinders": 2,
             "bore": {
                 "mm": 81.0,
@@ -70,6 +60,12 @@
             "idle_speed": {
                 "average": 1300,
                 "variance": 100
+            },
+            "fuel": {
+                "RON": 91,
+                "AKI": 87,
+                "ethanol": 10,
+                "methanol": 5
             }
         },
         "drive_train": {
@@ -146,7 +142,11 @@
                         }
                     }
                 }
-            }
+            },
+            "vin_location": [
+                "frame number: right side steering head",
+                "engine number: left side of crankcase"
+            ]
         },
         "electrical": {
             "ignition_type": "electical ignition (transistorized)",
@@ -281,16 +281,16 @@
             "replace": {
                 "years": 2
             }
-        }
+        },
+        "lubrication_points": [
+            "clutch lever holder",
+            "side-stand pivot and spring hood",
+            "footrest pivot",
+            "drive chain",
+            "brake lever holder and throttle cables",
+            "brake pedal pivot and footrest pivot"
+        ]
     },
-    "lubrication_points": [
-        "clutch lever holder",
-        "side-stand pivot and spring hood",
-        "footrest pivot",
-        "drive chain",
-        "brake lever holder and throttle cables",
-        "brake pedal pivot and footrest pivot"
-    ],
     "maintenance": {},
     "torque_values": {
         "cylinder_head_cover_bolt": {
