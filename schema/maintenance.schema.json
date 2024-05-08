@@ -120,6 +120,10 @@
             "description": "Year(s) of the bike, seperated with a dash",
             "type": "string"
         },
+        "description": {
+            "description": "couple sentences description of the bike",
+            "type": "string"
+        },
         "specification": {
             "desciprtion": "Basic specification of the motorcycle",
             "type": "object",
@@ -401,6 +405,7 @@
         "model",
         "manufacturer",
         "years",
+        "description",
         "specification",
         "maintenance",
         "torque_values"

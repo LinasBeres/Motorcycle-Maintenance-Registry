@@ -3,6 +3,7 @@
     "model": "dl650",
     "years": "2004-2011",
     "name": "VStrom 650",
+    "description": "The Suzuki V-Strom 650 (DL650) is a mid-weight, sport touring motorcycle made by Suzuki since 2004, in its third generation since model year 2017. It has a standard riding posture, fuel injection and an aluminum chassis. The bike is variously categorized as dual sport, sport enduro tourer, street/adventure, commuter, or entry-level.",
     "specification": {
         "dimensions": {
             "length": {
@@ -416,7 +417,7 @@
         "conrod_bearing_cap_bolt_initial": {
             "newtonMetre": 21.0,
             "footPound": 15.0,
-            "note": "final: tighten them 1/4 of a turn"
+            "note": "final tighten then 1/4 of a turn"
         },
         "exhaust_pipe_bolt": {
             "newtonMetre": 23.0,
@@ -474,7 +475,7 @@
             "newtonMetre": 17.0,
             "footPound": 12.5
         },
-        "ect_sensor": {
+        "ECT_sensor": {
             "newtonMetre": 19.0,
             "footPound": 13.5
         },
@@ -506,15 +507,15 @@
             "newtonMetre": 23.0,
             "footPound": 16.5
         },
-        "tp_sensor_mounting_screw": {
+        "TP_sensor_mounting_screw": {
             "newtonMetre": 3.5,
             "footPound": 2.5
         },
-        "stp_sensor_mounting_screw": {
+        "STP_sensor_mounting_screw": {
             "newtonMetre": 2.0,
             "footPound": 1.5
         },
-        "iat_sensor": {
+        "IAT_sensor": {
             "newtonMetre": 18.0,
             "footPound": 13.0
         },
